@@ -124,7 +124,7 @@ do local _={
 		FootPrintLength=571.07745361328125,
 		FrontBrakeOptions="BrakeCaliper_1Piston_Name",
 		RearSwayBarStiffness=400,
-		GearboxRatios="GearRatio_6_Name",
+		GearboxRatios="GearRatio_5_Name",
 		SpeedLimiter=200,
 		RatioSpacing=0.30896157775803301,
 		QualityBody=5,
@@ -204,12 +204,9 @@ do local _={
 			BaseFrontTrackWidth=146,
 			MaxRearOutsideWidth=200,
 			SeatRowsFront=2.5,
-			RearAxleYPosition=-176,
-			CabOver=false,
+			ConvertableSoft=false,
+			FrontalArea=2.9336833953857422,
 			SeatRowsRear=0,
-			HeightOffset=-2,
-			ConvertableHard=false,
-			Year=1957,
 			FrontEngineBounds={
 				{
 					50.040000915527344,
@@ -232,8 +229,11 @@ do local _={
 					0
 				}
 			},
-			FrontalArea=2.9336833953857422,
-			ConvertableSoft=false
+			ConvertableHard=false,
+			Year=1957,
+			HeightOffset=-2,
+			CabOver=false,
+			RearAxleYPosition=-176
 		},
 		FrontPadType=0.69999999999999996,
 		RearBrakeForce=66.799999999999997,
@@ -268,65 +268,65 @@ do local _={
 				200.90667724609375,
 				0.207427978515625
 			},
-			cpillar={
-				6.103515625e-05,
-				-50.836822509765625,
-				251.70526123046875
+			bpillarglassalt={
+				3.0517578125e-05,
+				1.7957763671875,
+				180.33479309082031
 			},
 			["bone-root"]={
 				0,
 				0,
 				0
 			},
-			r_frontarch={
-				-200.04934692382813,
-				200.90667724609375,
-				0.20751953125
+			cpillarglassalt={
+				-1.9073486328125e-05,
+				-92.582504272460938,
+				180.33477783203125
 			},
 			frontdent={
 				6.103515625e-05,
 				339.5430908203125,
 				50.83062744140625
 			},
-			r_sidedent={
-				-200.04937744140625,
-				-0.75600814819335938,
-				50.830642700195313
+			r_frontarch={
+				-200.04934692382813,
+				200.90667724609375,
+				0.20751953125
 			},
 			r_reararch={
 				-200.04940795898438,
 				-127.97794342041016,
 				0.207489013671875
 			},
-			roofheight={
-				6.103515625e-05,
-				47.50506591796875,
-				331.180419921875
+			apillar={
+				9.1552734375e-05,
+				166.26223754882813,
+				251.70527648925781
 			},
 			l_reararch={
 				200.04937744140625,
 				-127.97796630859375,
 				0.2073974609375
 			},
-			bpillar={
-				6.103515625e-05,
-				47.505096435546875,
-				251.70526123046875
-			},
-			apillar={
-				9.1552734375e-05,
-				166.26223754882813,
-				251.70527648925781
-			},
-			l_sidedent={
-				200.04940795898438,
-				-0.7560272216796875,
-				50.830551147460938
-			},
 			bpillarglass={
 				4.57763671875e-05,
 				47.505081176757813,
 				180.33479309082031
+			},
+			cpillar={
+				6.103515625e-05,
+				-50.836822509765625,
+				251.70526123046875
+			},
+			cpillarglass={
+				3.4332275390625e-05,
+				-50.439682006835938,
+				180.33477783203125
+			},
+			bpillar={
+				6.103515625e-05,
+				47.505096435546875,
+				251.70526123046875
 			},
 			apillarglass={
 				6.103515625e-05,
@@ -338,10 +338,10 @@ do local _={
 				211.38394165039063,
 				99.741668701171875
 			},
-			cpillarglass={
-				3.4332275390625e-05,
-				-50.439682006835938,
-				180.33477783203125
+			l_sidedent={
+				200.04940795898438,
+				-0.7560272216796875,
+				50.830551147460938
 			},
 			frontlength={
 				3.0517578125e-05,
@@ -353,15 +353,15 @@ do local _={
 				211.38395690917969,
 				99.741630554199219
 			},
-			cpillarglassalt={
-				-1.9073486328125e-05,
-				-92.582504272460938,
-				180.33477783203125
+			roofheight={
+				6.103515625e-05,
+				47.50506591796875,
+				331.180419921875
 			},
-			bpillarglassalt={
-				3.0517578125e-05,
-				1.7957763671875,
-				180.33479309082031
+			r_sidedent={
+				-200.04937744140625,
+				-0.75600814819335938,
+				50.830642700195313
 			}
 		},
 		SuspensionOffset=9,
@@ -369,8 +369,8 @@ do local _={
 		FrontSpringStiffness=32000,
 		EnginePoint={
 			0,
-			182.85038404000002,
-			10,
+			186.85038404000002,
+			12,
 			-90
 		},
 		VUID="469EFE9D4B2BCA91D501B6AB6B6BA69D",
@@ -383,7 +383,7 @@ do local _={
 		SecondRowSeats="SeatOption_3_ShortName",
 		FootPrintWidth=194.70925903320313,
 		WeightDistributionFraction=0.5,
-		PowerDistribution=0.5,
+		PowerDistribution=0,
 		FrontTyreWidth=225,
 		RearToe=0.050000000000000003,
 		UID="C567FEDD494E9AD263DDB298628CBC11",
@@ -394,10 +394,10 @@ do local _={
 		TargetFirstGearFraction=0.291015625,
 		AdvancedGearing={
 			GearRatios={},
-			IsAdvancedGearingEnabled=false,
 			FinalDrive={
 				Ratio=0
-			}
+			},
+			IsAdvancedGearingEnabled=false
 		},
 		QualityBrakes=5,
 		Springs="Springs_Passive_Name",
@@ -416,19 +416,19 @@ do local _={
 			DriveTrain=5,
 			Aerodynamics=5,
 			Body=5,
-			DriverAssists=5,
+			BottomEnd=5,
 			ModelBodyUnlock=5,
 			Safety=5,
-			Suspension=5,
 			FuelSystem=5,
-			BottomEnd=5
+			Suspension=5,
+			DriverAssists=5
 		},
 		Fixtures={
 			{
 				"2AADBED44A2FC34ED31B20B37B13C551",
 				-61.4248046875,
 				268.2734375,
-				54.406261444091797,
+				54.406269073486328,
 				0,
 				0,
 				0,
@@ -464,7 +464,7 @@ do local _={
 				4.7253408432006836,
 				0,
 				0,
-				179.99996948242188,
+				179.99995422363281,
 				1,
 				1,
 				1,
@@ -483,37 +483,6 @@ do local _={
 				{},
 				"",
 				"",
-				nil,
-				"",
-				0,
-				false
-			},
-			{
-				"4342E10C4CF6017F5E1727A929284452",
-				0,
-				-271.21871948242188,
-				-0.8832392692565918,
-				0,
-				0,
-				179.99996948242188,
-				1,
-				1,
-				1,
-				false,
-				0,
-				0,
-				"EFixtureType::EFT_TOW_HOOK",
-				{},
-				"0AABAF054D244FB1C026339721EDFA19",
-				"00000000000000000000000000000000",
-				false,
-				true,
-				true,
-				"",
-				false,
-				{},
-				"",
-				"Tow Hook",
 				nil,
 				"",
 				0,
@@ -553,11 +522,11 @@ do local _={
 			{
 				"AF78FE704C89532D5DA431919F3CE660",
 				0,
-				-274.43759155273438,
-				51.894054412841797,
+				-274.375,
+				61.297130584716797,
 				0,
 				0,
-				179.99996948242188,
+				179.99995422363281,
 				1,
 				1,
 				1,
@@ -591,7 +560,7 @@ do local _={
 				36.724609375,
 				0,
 				0,
-				179.99996948242188,
+				179.99995422363281,
 				1,
 				1,
 				1,
@@ -619,7 +588,7 @@ do local _={
 				"A2734D114B8FA370F32886833438F52E",
 				96.6171875,
 				44.129360198974609,
-				61.019542694091797,
+				61.019550323486328,
 				-3.4795846939086914,
 				0.012567547149956226,
 				-90.000724792480469,
@@ -652,7 +621,7 @@ do local _={
 				"A2734D114B8FA370F32886833438F52E",
 				96.671875,
 				-39.451129913330078,
-				60.277355194091797,
+				60.277362823486328,
 				-3.4795544147491455,
 				0.012567547149956226,
 				-90.000724792480469,
@@ -684,11 +653,11 @@ do local _={
 			{
 				"2A5BECA742D5CC2716FB53AAA2024DB1",
 				0,
-				-273.60931396484375,
-				19.27734375,
+				-274.31243896484375,
+				37.110832214355469,
 				0,
 				0,
-				179.99996948242188,
+				179.99995422363281,
 				1,
 				1,
 				1,
@@ -754,9 +723,9 @@ do local _={
 				-87.53125,
 				131.73797607421875,
 				79.763710021972656,
-				2.41916404775111e-06,
+				2.4195810510718729e-06,
 				-0.012574377469718456,
-				89.999961853027344,
+				89.999954223632813,
 				1,
 				1,
 				1,
@@ -788,7 +757,7 @@ do local _={
 				65.01531982421875,
 				-273.60946655273438,
 				20.8427734375,
-				2.4299256801605225,
+				2.4299266338348389,
 				2.7320755179971457e-05,
 				-179.86296081542969,
 				0.75237500667572021,
@@ -817,14 +786,14 @@ do local _={
 			{
 				"0B40E09449E0150E9CC807AC83B039AC",
 				0,
-				-273.8671875,
-				71.273582458496094,
-				-9.4861869812011719,
+				-272.60952758789063,
+				76.167015075683594,
+				-31.808086395263672,
 				0,
 				-179.99996948242188,
-				1,
-				1,
-				1,
+				0.73614394664764404,
+				0.99999994039535522,
+				0.73614394664764404,
 				false,
 				0,
 				0,
@@ -850,7 +819,7 @@ do local _={
 				-64.83544921875,
 				-273.46868896484375,
 				17.05029296875,
-				2.4347250461578369,
+				2.4347236156463623,
 				-3.4150943974964321e-05,
 				179.86296081542969,
 				1,
@@ -875,6 +844,37 @@ do local _={
 				"",
 				0,
 				false
+			},
+			{
+				"4342E10C4CF6017F5E1727A929284452",
+				0,
+				-273.44534301757813,
+				15.502832412719727,
+				0,
+				0,
+				179.99995422363281,
+				1,
+				1,
+				1,
+				false,
+				0,
+				0,
+				"EFixtureType::EFT_TOW_HOOK",
+				{},
+				"3CADF8B54F2D582A67BF55AE2ECE59C7",
+				"00000000000000000000000000000000",
+				false,
+				true,
+				true,
+				"",
+				false,
+				{},
+				"",
+				"Tow Hook",
+				nil,
+				"",
+				0,
+				false
 			}
 		},
 		FrontRowSeats="SeatOption_2_ShortName",
@@ -883,8 +883,8 @@ do local _={
 		FrontRimOffset=5,
 		GearboxPoint={
 			0,
-			182.85038404000002,
-			10
+			186.85038404000002,
+			12
 		},
 		RideHeight=33.799999999999997,
 		TyreType="TyreType_Radial_Name",
@@ -895,7 +895,7 @@ do local _={
 		QualityAero=5,
 		QualityGearbox=5,
 		FrontCamber=-0.5,
-		DriveType="DriveType_FLongAWD_Helical_Name",
+		DriveType="DriveType_FLong4x4_Name",
 		Dampers="Dampers_Adaptive_Name",
 		FrontSwayBarStiffness=1000,
 		RearDamperStiffness=3000,
@@ -915,11 +915,11 @@ do local _={
 		TyreDetails={
 			MinOverallDiameter=630,
 			Front={
-				Profile=70,
+				Inside=95,
 				Rim=15,
 				MaxInside=100,
 				Offset=5,
-				Inside=95,
+				Profile=70,
 				ProfileCalc=70.888888888888886,
 				MaxOutside=190,
 				Width=225,
@@ -928,11 +928,11 @@ do local _={
 			},
 			MinProfile=20,
 			Rear={
-				Profile=70,
+				Inside=75,
 				Rim=15,
 				MaxInside=160,
 				Offset=85,
-				Inside=75,
+				Profile=70,
 				ProfileCalc=70.888888888888886,
 				MaxOutside=200,
 				Width=225,
@@ -950,13 +950,13 @@ do local _={
 					"Paint Clone",
 					{
 						CarBaseColor={
-							SlotType="Vector",
 							Value={
-								V=1,
-								H=234,
 								A=1,
-								S=1
-							}
+								H=234,
+								S=1,
+								V=1
+							},
+							SlotType="Vector"
 						}
 					},
 					"F25184A14A687C6A9B0B9BB39136032F"
@@ -1007,14 +1007,12 @@ do local _={
 			MaxRearTyreWidth=200,
 			BodyType="EBodyType::EBT_TRUCK",
 			BaseFrontTrackWidth=146,
-			ConvertableSoft=false,
+			RearAxleYPosition=-176,
 			EngineTypes={
 				FRONT=true
 			},
 			FrontalArea=2.9336833953857422,
-			TrimEngineTypes={
-				FRONT=true
-			},
+			CabOver=false,
 			BaseRearTrackWidth=146,
 			FrontEngineBounds={
 				{
@@ -1040,6 +1038,12 @@ do local _={
 			},
 			FrontSuspensionToDisable={},
 			MaxOverallDiameter=850,
+			SeatRowsRear=0,
+			Doors=4,
+			ConvertableHard=false,
+			SeatRowsFront=2.5,
+			HeightOffset=-2,
+			Name="57_LWB_Truck_Crew_SB_Preview",
 			RearEngineBounds={
 				{
 					50.040000915527344,
@@ -1062,12 +1066,6 @@ do local _={
 					0
 				}
 			},
-			Name="57_LWB_Truck_Crew_SB_Preview",
-			HeightOffset=-2,
-			SeatRowsFront=2.5,
-			ConvertableHard=false,
-			Doors=4,
-			SeatRowsRear=0,
 			SeatRowsMid=0,
 			MidEngineBounds={
 				{
@@ -1092,9 +1090,11 @@ do local _={
 				}
 			},
 			Year=1957,
-			CabOver=false,
+			TrimEngineTypes={
+				FRONT=true
+			},
 			FamilyUID="0B8BCC7D4C47C812EAC0D7968C3C350A",
-			RearAxleYPosition=-176
+			ConvertableSoft=false
 		},
 		InternalDays=28801
 	},
