@@ -86,12 +86,12 @@ do local _={
 			DriveTrain=5,
 			Aerodynamics=5,
 			Body=5,
-			BottomEnd=5,
+			DriverAssists=5,
 			ModelBodyUnlock=5,
 			Safety=5,
-			FuelSystem=5,
 			Suspension=5,
-			DriverAssists=5
+			FuelSystem=5,
+			BottomEnd=5
 		},
 		ChargerMaxBoost_2=1,
 		AspirationSetup="Aspiration_Natural_Setup_Name",
@@ -236,6 +236,14 @@ do local _={
 			BaseFrontTrackWidth=127,
 			MaxRearOutsideWidth=110,
 			SeatRowsFront=2.5,
+			MaxFrontOutsideWidth=120,
+			FrontAxleYPosition=121,
+			SeatRowsRear=2.5,
+			RearAxleYPosition=-121,
+			HeightOffset=-13,
+			Year=2011,
+			ConvertableSoft=false,
+			WheelBase=242,
 			FrontEngineBounds={
 				{
 					40.729999542236328,
@@ -257,15 +265,7 @@ do local _={
 					97,
 					0
 				}
-			},
-			WheelBase=242,
-			SeatRowsRear=2.5,
-			ConvertableSoft=false,
-			HeightOffset=-13,
-			Year=2011,
-			RearAxleYPosition=-121,
-			FrontAxleYPosition=121,
-			MaxFrontOutsideWidth=120
+			}
 		},
 		FrontPadType=0.29999999999999999,
 		RearBrakeForce=56.400000000000006,
@@ -400,20 +400,20 @@ do local _={
 				-112.84355163574219,
 				160.9906005859375
 			},
-			frontbumperdetail={
-				-1.4551915228366852e-11,
-				364.76690673828125,
-				6.103515625e-05
-			},
-			r_fender={
-				-150.054443359375,
+			l_fender={
+				150.054443359375,
 				131.01223754882813,
+				1.52587890625e-05
+			},
+			wheelarchshape_morphtarget={
+				0,
+				-0,
 				0
 			},
-			r_rearside={
-				-150.05442810058594,
-				-280.1995849609375,
-				-3.0517578125e-05
+			bootdetail={
+				-7.2759576141834259e-12,
+				-314.97756958007813,
+				88.6201171875
 			},
 			l_wheelwellwidth={
 				150.054443359375,
@@ -425,14 +425,24 @@ do local _={
 				-234.09394836425781,
 				-1.52587890625e-05
 			},
-			["bone-root"]={
+			clearance_morphtarget={
 				0,
 				0,
-				0
+				-0
 			},
-			cpillar={
-				9.0949470177292824e-12,
-				-142.47700500488281,
+			r_rocker={
+				-150.05442810058594,
+				-39.419376373291016,
+				-3.814697265625e-06
+			},
+			r_frontside={
+				-150.05442810058594,
+				200.98606872558594,
+				3.0517578125e-05
+			},
+			cpillarlower={
+				5.4569682106375694e-12,
+				-172.38697814941406,
 				160.99058532714844
 			},
 			dpillarupper={
@@ -440,45 +450,35 @@ do local _={
 				-283.935302734375,
 				160.99057006835938
 			},
-			cpillarlower={
-				5.4569682106375694e-12,
-				-172.38697814941406,
+			cpillar={
+				9.0949470177292824e-12,
+				-142.47700500488281,
 				160.99058532714844
 			},
-			r_frontside={
-				-150.05442810058594,
-				200.98606872558594,
-				3.0517578125e-05
-			},
-			r_rocker={
-				-150.05442810058594,
-				-39.419376373291016,
-				-3.814697265625e-06
-			},
-			clearance_morphtarget={
+			["bone-root"]={
 				0,
 				0,
-				-0
+				0
 			},
 			frontlength={
 				-3.637978807091713e-12,
 				305.13650512695313,
 				3.0517578125e-05
 			},
-			bootdetail={
-				-7.2759576141834259e-12,
-				-314.97756958007813,
-				88.6201171875
+			r_rearside={
+				-150.05442810058594,
+				-280.1995849609375,
+				-3.0517578125e-05
 			},
-			wheelarchshape_morphtarget={
-				0,
-				-0,
+			r_fender={
+				-150.054443359375,
+				131.01223754882813,
 				0
 			},
-			l_fender={
-				150.054443359375,
-				131.01223754882813,
-				1.52587890625e-05
+			frontbumperdetail={
+				-1.4551915228366852e-11,
+				364.76690673828125,
+				6.103515625e-05
 			}
 		},
 		SuspensionOffset=7,
@@ -512,10 +512,10 @@ do local _={
 		TargetFirstGearFraction=0.392578125,
 		AdvancedGearing={
 			GearRatios={},
-			IsAdvancedGearingEnabled=false,
 			FinalDrive={
 				Ratio=0
-			}
+			},
+			IsAdvancedGearingEnabled=false
 		},
 		QualityBrakes=5,
 		Springs="Springs_Progressive_Name",
@@ -534,12 +534,12 @@ do local _={
 			DriveTrain=5,
 			Aerodynamics=5,
 			Body=5,
-			DriverAssists=5,
+			BottomEnd=5,
 			ModelBodyUnlock=5,
 			Safety=5,
-			Suspension=5,
 			FuelSystem=5,
-			BottomEnd=5
+			Suspension=5,
+			DriverAssists=5
 		},
 		Fixtures={
 			{
@@ -709,7 +709,7 @@ do local _={
 				19.909957885742188,
 				0,
 				0,
-				-179.99996948242188,
+				-179.99995422363281,
 				1,
 				1,
 				1,
@@ -740,7 +740,7 @@ do local _={
 				33.746105194091797,
 				0,
 				0,
-				-179.99996948242188,
+				-179.99995422363281,
 				1,
 				1,
 				1,
@@ -808,7 +808,7 @@ do local _={
 				71.8671875,
 				0,
 				-0.0033263019286096096,
-				-89.999961853027344,
+				-89.99993896484375,
 				1,
 				1,
 				1,
@@ -842,7 +842,7 @@ do local _={
 				70.6171875,
 				0,
 				0,
-				-179.99996948242188,
+				-179.99995422363281,
 				1,
 				1,
 				1,
@@ -875,7 +875,7 @@ do local _={
 				78.4228515625,
 				0,
 				0,
-				-179.99996948242188,
+				-179.99995422363281,
 				1,
 				1,
 				1,
@@ -906,7 +906,7 @@ do local _={
 				13.486325263977051,
 				0,
 				0,
-				-179.99996948242188,
+				-179.99995422363281,
 				1,
 				1,
 				1,
@@ -963,18 +963,18 @@ do local _={
 		InclinationRear=0.5,
 		AestheticSettings={
 			WindowTint=0.5,
-			WindowTransparency=0.62999999523162842
+			WindowTransparency=0.099999994039535522
 		},
 		MUID="E765D5B04F6E2C78391AC3B7EB53012C",
 		TyreDetails={
 			RimModID="",
 			MinOverallDiameter=570,
 			Front={
-				Profile=60,
+				Inside=105,
 				Rim=15,
 				MaxInside=130,
 				Offset=25,
-				Inside=105,
+				Profile=60,
 				ProfileCalc=59.75,
 				MaxOutside=120,
 				Width=200,
@@ -983,11 +983,11 @@ do local _={
 			},
 			MinProfile=20,
 			Rear={
-				Profile=60,
+				Inside=115,
 				Rim=15,
 				MaxInside=115,
 				Offset=0,
-				Inside=115,
+				Profile=60,
 				ProfileCalc=59.75,
 				MaxOutside=110,
 				Width=200,
@@ -1005,13 +1005,13 @@ do local _={
 					"Paint Clone",
 					{
 						CarBaseColor={
-							SlotType="Vector",
 							Value={
+								S=1,
 								V=1,
-								H=234,
 								A=1,
-								S=1
-							}
+								H=234
+							},
+							SlotType="Vector"
 						}
 					},
 					"F25184A14A687C6A9B0B9BB39136032F"
@@ -1057,7 +1057,7 @@ do local _={
 				z=124.60348510742188
 			},
 			FrontalArea=2.0589184761047363,
-			Doors=4,
+			CabOver=false,
 			BaseRearTrackWidth=127,
 			FrontEngineBounds={
 				{
@@ -1089,38 +1089,15 @@ do local _={
 				REAR=true,
 				FRONT=true
 			},
-			FrontAxleYPosition=121,
+			TrimEngineTypes={
+				REAR=true,
+				FRONT=true
+			},
 			ConvertableSoft=false,
 			RearAxleYPosition=-121,
 			MaxOverallDiameter=670,
 			FrontSuspensionToDisable={},
-			RearEngineBounds={
-				{
-					40.729999542236328,
-					-171.5,
-					94.71875
-				},
-				{
-					40.729999542236328,
-					-83.5,
-					100
-				},
-				{
-					40.729999542236328,
-					-83.5,
-					0
-				},
-				{
-					40.729999542236328,
-					-171.5,
-					0
-				}
-			},
-			MaxFrontTyreWidth=120,
-			HeightOffset=-13,
-			Name="11_jp_sedan_5door_S_cpp",
-			SeatRowsFront=2.5,
-			ConvertableHard=false,
+			SeatRowsRear=2.5,
 			EngineBayBounds={
 				{
 					40.729999542236328,
@@ -1143,7 +1120,33 @@ do local _={
 					0
 				}
 			},
-			SeatRowsRear=2.5,
+			ConvertableHard=false,
+			SeatRowsFront=2.5,
+			Name="11_jp_sedan_5door_S_cpp",
+			HeightOffset=-13,
+			MaxFrontTyreWidth=120,
+			RearEngineBounds={
+				{
+					40.729999542236328,
+					-171.5,
+					94.71875
+				},
+				{
+					40.729999542236328,
+					-83.5,
+					100
+				},
+				{
+					40.729999542236328,
+					-83.5,
+					0
+				},
+				{
+					40.729999542236328,
+					-171.5,
+					0
+				}
+			},
 			SeatRowsMid=0,
 			MidEngineBounds={
 				{
@@ -1168,12 +1171,9 @@ do local _={
 				}
 			},
 			Year=2011,
-			TrimEngineTypes={
-				REAR=true,
-				FRONT=true
-			},
+			FrontAxleYPosition=121,
 			FamilyUID="00BC603946D1795D0EDFA3BE5922D213",
-			CabOver=false
+			Doors=4
 		},
 		InternalDays=28801
 	},
