@@ -1,0 +1,1 @@
+the .car files are essentially the source code, to import, simply drag them into AppData\Local\AutomationGame\Saved\UserData\CarSaveImport, launch the game, open car designer and it will automatically import your selected Hiwall Vehicle
